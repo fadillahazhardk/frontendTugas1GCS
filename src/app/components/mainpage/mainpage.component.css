@@ -1,0 +1,39 @@
+.title {
+  margin: 24px 0;
+  text-align: center;
+}
+.card-header {
+  padding: 0;
+}
+.profileCard {
+  max-width: 500px;
+  margin: 10px auto;
+}
+.bio-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.action-button {
+  text-align: center;
+}
+/* Update Form */
+.signUpForm {
+  max-width: 300px;
+  margin: 50px auto;
+}
+.form-title {
+  margin: 0 auto;
+  text-align: center;
+}
+.form-field {
+  width: 100%;
+  margin-bottom: 6px;
+}
+form {
+  text-align: center;
+}
+.submitButton {
+  margin-top: 16px;
+}

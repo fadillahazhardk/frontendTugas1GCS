@@ -1,0 +1,51 @@
+<div class="signUpForm">
+  <mat-card>
+    <div class="form-title">
+      <mat-card-title>Register</mat-card-title>
+      <mat-card-subtitle>Create New Account</mat-card-subtitle>
+    </div>
+
+    <mat-card-content>
+      <form (submit)="submit($event)">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="pat@example.com" [formControl]="email" required name="email" [(ngModel)]="userForm.email">
+          <mat-hint>Enter your valid email!</mat-hint>
+          <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Full Name</mat-label>
+          <input matInput placeholder="midlaner@gmail.com" [formControl]="fullName" required name="name" [(ngModel)]="userForm.name">
+          <mat-hint>Enter your Full Name!</mat-hint>
+          <mat-error *ngIf="fullName.invalid">{{getNameErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="midlaner@gmail.com" [formControl]="password" required name="password" [(ngModel)]="userForm.password">
+          <mat-hint>Enter your Password!</mat-hint>
+          <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Confirm Password</mat-label>
+          <input matInput placeholder="midlaner@gmail.com" [formControl]="password" required name="passwordConfirm" [(ngModel)]="userForm.passwordConfirm">
+          <mat-hint>Confirm your Password!</mat-hint>
+          <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Number Phone</mat-label>
+          <input matInput placeholder="midlaner@gmail.com" [formControl]="numberPhone" required name="numberPhone" [(ngModel)]="userForm.numberPhone">
+          <mat-hint>Enter your Number Phone!</mat-hint>
+          <mat-error *ngIf="numberPhone.invalid">{{getNumPhoneErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Addres</mat-label>
+          <input matInput placeholder="midlaner@gmail.com" [formControl]="address" required name="address" [(ngModel)]="userForm.address">
+          <mat-hint>Enter your Addres!</mat-hint>
+          <mat-error *ngIf="address.invalid">{{getAddressErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" class="submitButton">Register</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+

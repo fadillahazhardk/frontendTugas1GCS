@@ -1,0 +1,45 @@
+<div class="signUpForm">
+  <mat-card>
+    <div class="form-title">
+      <mat-card-title>Register</mat-card-title>
+      <mat-card-subtitle>Create New Account</mat-card-subtitle>
+    </div>
+
+    <mat-card-content>
+      <form (submit)="submit()">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="pat@example.com" [formControl]="email" required>
+          <mat-hint>Enter your valid email!</mat-hint>
+          <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Full Name</mat-label>
+          <input matInput placeholder="midlaner@gmail.com" [formControl]="fullName" required>
+          <mat-hint>Enter your Full Name!</mat-hint>
+          <mat-error *ngIf="fullName.invalid">{{getNameErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="midlaner@gmail.com" [formControl]="password" required>
+          <mat-hint>Enter your Password!</mat-hint>
+          <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Number Phone</mat-label>
+          <input matInput placeholder="midlaner@gmail.com" [formControl]="numberPhone" required>
+          <mat-hint>Enter your Number Phone!</mat-hint>
+          <mat-error *ngIf="numberPhone.invalid">{{getNumPhoneErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Addres</mat-label>
+          <input matInput placeholder="midlaner@gmail.com" [formControl]="address" required>
+          <mat-hint>Enter your Addres!</mat-hint>
+          <mat-error *ngIf="address.invalid">{{getAddressErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" class="submitButton">Register</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
